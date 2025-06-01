@@ -1,7 +1,5 @@
-import React from 'react';
-
 export interface SocialLink {
   name: string;
-  icon: React.ReactElement;
+  icon: React.ReactNode;
   url: string;
 }
