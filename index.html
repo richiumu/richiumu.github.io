@@ -2,7 +2,7 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <base href="./">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>個人頁面</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,7 +73,8 @@
 </head>
   <body class="bg-neutral-dark text-neutral-light font-sans">
     <div id="root"></div>
-    <script type="module" src="./src/index.tsx"></script>
+    {/* Changed src to point to the compiled JS file */}
+    <script type="module" src="./src/index.js"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
