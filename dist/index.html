@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人頁面</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#4FD1C5', // Teal
+              'secondary': '#F6AD55', // Orange
+              'neutral-light': '#F7FAFC',
+              'neutral-dark': '#1A202C',
+              'text-light': '#718096',
+              'text-dark': '#2D3748',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Lexend', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'kotone-pulse-animation': 'kotonePulse 2s infinite ease-in-out',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' }
+              },
+              kotonePulse: {
+                '0%, 100%': { opacity: '0.85' },
+                '50%': { opacity: '1' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .text-glow-yellow {
+        /* Enhanced glow effect */
+        text-shadow: 0 0 5px #FACC15, 0 0 10px #FACC15, 0 0 15px #FCE9A0; /* #FACC15 is yellow-400, #FCE9A0 is a lighter yellow for outer glow */
+        animation: kotonePulse 2s infinite ease-in-out;
+      }
+
+      @keyframes kotonePulse {
+        0%, 100% {
+          opacity: 0.85;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "recharts": "https://esm.sh/recharts@^2.12.7"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CSSHWgKj.js"></script>
+</head>
+  <body class="bg-neutral-dark text-neutral-light font-sans">
+    <div id="root"></div>
+</body>
+</html>
